@@ -1,0 +1,58 @@
+{
+  "name": "hubot-geocode-store",
+  "version": "0.0.0",
+  "description": "Hubot plugin for geocoding physical and ip addresses",
+  "main": "src/index.js",
+  "repository": "https://github.com/gfax/hubot-geocode-store",
+  "author": "Jay Thomas <jay@gfax.ch>",
+  "license": "GPL-3.0",
+  "scripts": {
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "eslint": "eslint . --ext .json --ext .js",
+    "eslint:fix": "npm run eslint -- --fix",
+    "nyc": "nyc ava '**/*.spec.js'",
+    "start": "hubot",
+    "test": "npm run eslint && npm run nyc"
+  },
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js"
+    ],
+    "report-dir": "./coverage",
+    "reporter": [
+      "json",
+      "text",
+      "html"
+    ]
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "codecov": "^3.1.0",
+    "eslint": "^4.10.0",
+    "eslint-plugin-json": "^1.3.2",
+    "eslint-plugin-unicorn": "^2.1.2",
+    "hubot": "^3.1.1",
+    "nyc": "^13.1.0",
+    "sinon": "^7.1.1"
+  },
+  "dependencies": {},
+  "keywords": [
+    "api",
+    "hubot",
+    "hubot-script",
+    "hubot-scripts",
+    "geocode",
+    "geolocate",
+    "geolocation",
+    "lookup",
+    "geocod",
+    "geocod.io",
+    "geocod-io",
+    "here",
+    "here.com",
+    "ip-api",
+    "ipapi",
+    "latitude",
+    "longitude"
+  ]
+}
